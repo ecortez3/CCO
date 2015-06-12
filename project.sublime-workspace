@@ -1,0 +1,628 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"mealRo",
+				"mealRosterBreakfast"
+			],
+			[
+				"clie",
+				"client_id"
+			],
+			[
+				"fu",
+				"function"
+			],
+			[
+				"role",
+				"role_id"
+			],
+			[
+				"on",
+				"onclick"
+			],
+			[
+				"temp",
+				"tempscale"
+			],
+			[
+				"t",
+				"temp"
+			],
+			[
+				"get",
+				"getElementById"
+			],
+			[
+				"C",
+				"CreateClientRequest"
+			],
+			[
+				"doc",
+				"doc_f	Function"
+			],
+			[
+				"doc_",
+				"doc_c	Class"
+			],
+			[
+				"el",
+				"eligable"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "app/Http/Controllers/ClientController.php",
+			"settings":
+			{
+				"buffer_size": 3414,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/Http/routes.php",
+			"settings":
+			{
+				"buffer_size": 3201,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/Http/Controllers/MealController.php",
+			"settings":
+			{
+				"buffer_size": 3617,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "resources/views/meal/meal_roster_breakfast.blade.php",
+			"settings":
+			{
+				"buffer_size": 1833,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "resources/views/home.blade.php",
+			"settings":
+			{
+				"buffer_size": 1094,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 81.0,
+		"last_filter": "install",
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 400.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/wamp/www/cco",
+		"/C/wamp/www/cco/app",
+		"/C/wamp/www/cco/app/Http",
+		"/C/wamp/www/cco/app/Http/Controllers",
+		"/C/wamp/www/cco/app/Http/Controllers/Auth",
+		"/C/wamp/www/cco/app/Http/Middleware",
+		"/C/wamp/www/cco/app/Http/Requests",
+		"/C/wamp/www/cco/database",
+		"/C/wamp/www/cco/database/migrations",
+		"/C/wamp/www/cco/database/seeds",
+		"/C/wamp/www/cco/public/css",
+		"/C/wamp/www/cco/resources",
+		"/C/wamp/www/cco/resources/views",
+		"/C/wamp/www/cco/resources/views/clients",
+		"/C/wamp/www/cco/resources/views/meal",
+		"/C/wamp/www/cco/resources/views/partials",
+		"/C/wamp/www/cco/storage",
+		"/C/wamp/www/cco/storage/framework",
+		"/C/wamp/www/cco/storage/framework/views"
+	],
+	"file_history":
+	[
+		"/C/wamp/www/cco/resources/views/meal/meal_roster_breakfast.blade.php",
+		"/C/wamp/www/cco/resources/views/meal/meal_roster_lunch.blade.php",
+		"/C/wamp/www/cco/storage/framework/views/108743a0996e1ddb9a60623f42825161",
+		"/C/wamp/www/cco/app/Http/Controllers/HomeController.php",
+		"/C/wamp/www/cco/database/migrations/2015_05_08_001055_create_meals_table.php",
+		"/C/wamp/www/cco/resources/views/meal/meal_roster_dinner.blade.php",
+		"/C/wamp/www/cco/app/Http/Requests/ClientRequest.php",
+		"/C/wamp/www/cco/app/Http/Controllers/TempController.php",
+		"/C/wamp/www/cco/resources/views/clients/create.blade.php",
+		"/C/wamp/www/cco/app/Http/Controllers/Auth/AuthController.php",
+		"/C/wamp/www/cco/app/Http/Controllers/MealController.php",
+		"/C/wamp/www/cco/resources/views/meal/meal_time_select.blade.php",
+		"/C/wamp/www/cco/resources/views/meal/dinner_button.blade.php",
+		"/C/wamp/www/cco/resources/views/meal/lunch_button.blade.php",
+		"/C/wamp/www/cco/resources/views/meal/breakfast_button.blade.php",
+		"/C/wamp/www/cco/app/Http/Controllers/ClientController.php",
+		"/C/wamp/www/cco/resources/views/clients/fromTemp.blade.php",
+		"/C/wamp/www/cco/resources/views/temps/index.blade.php",
+		"/C/wamp/www/cco/database/seeds/RoleTableSeeder.php",
+		"/C/wamp/www/cco/database/seeds/ProgramTableSeeder.php",
+		"/C/wamp/www/cco/resources/views/clients/show.blade.php",
+		"/C/wamp/www/cco/resources/views/temps/show.blade.php",
+		"/C/wamp/www/cco/resources/views/partials/client.blade.php",
+		"/C/wamp/www/cco/resources/views/temps/create.blade.php",
+		"/C/wamp/www/cco/resources/views/partials/adminOp.blade.php",
+		"/C/wamp/www/cco/resources/views/clients/edit.blade.php",
+		"/C/wamp/www/cco/resources/views/app.blade.php",
+		"/C/wamp/www/cco/app/Meal.php",
+		"/C/wamp/www/cco/public/css/app.css",
+		"/C/wamp/www/cco/resources/views/clients/index.blade.php",
+		"/C/wamp/www/cco/resources/views/partials/managerOp.blade.php",
+		"/C/wamp/www/cco/resources/views/partials/manager.blade.php",
+		"/C/wamp/www/cco/resources/views/partials/admin.blade.php",
+		"/C/wamp/www/cco/resources/views/home.blade.php",
+		"/C/wamp/www/cco/vendor/laravel/framework/src/Illuminate/Support/Facades/Auth.php",
+		"/C/wamp/www/cco/vendor/laravel/framework/src/Illuminate/Auth/Guard.php",
+		"/C/wamp/www/cco/vendor/laravel/framework/src/Illuminate/Contracts/Auth/Authenticatable.php",
+		"/C/wamp/www/cco/app/Client.php",
+		"/C/wamp/www/cco/resources/views/errors/list.blade.php",
+		"/C/wamp/www/cco/database/migrations/2015_05_08_001000_create_clients_table.php",
+		"/C/wamp/www/cco/database/seeds/DatabaseSeeder.php",
+		"/C/wamp/www/cco/app/Agent.php",
+		"/C/wamp/www/cco/resources/views/errors/unauth.blade.php",
+		"/C/wamp/www/cco/database/seeds/AgentTableSeeder.php",
+		"/C/wamp/www/cco/app/Program.php",
+		"/C/wamp/www/cco/database/migrations/2015_05_08_010944_create_family_table.php",
+		"/C/wamp/www/cco/database/migrations/2015_05_19_222912_create_client_family_table.php",
+		"/C/wamp/www/cco/database/migrations/2015_05_08_002900_create_agent_program_table.php",
+		"/C/wamp/www/cco/app/Http/routes.php",
+		"/C/wamp/www/cco/app/Http/Middleware/RoleRedirect.php",
+		"/C/wamp/www/cco/vendor/compiled.php",
+		"/C/wamp/www/cco/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php",
+		"/C/wamp/www/cco/app/Http/Requests/AgentRequest.php",
+		"/C/wamp/www/cco/app/Http/Controllers/AgentController.php",
+		"/C/wamp/www/cco/app/Http/Requests/TempRequest.php",
+		"/C/wamp/www/cco/resources/views/auth/register.blade.php",
+		"/C/wamp/www/cco/app/Role.php",
+		"/C/wamp/www/cco/app/Http/Controllers/ReportController.php",
+		"/C/wamp/www/cco/resources/views/agents/create.blade.php",
+		"/C/wamp/www/cco/database/migrations/2015_05_21_065219_create_agent_role_table.php",
+		"/C/wamp/www/cco/database/migrations/2015_05_21_065219_create_agent_roles_table.php",
+		"/C/wamp/www/cornerstone_community_outrach/app/Http/Controllers/TempController.php",
+		"/C/wamp/www/cornerstone_community_outrach/app/Http/Controllers/ClientController.php",
+		"/C/wamp/www/cornerstone_community_outrach/resources/views/auth/password.blade.php",
+		"/C/wamp/www/cornerstone_community_outrach/resources/views/auth/login.blade.php",
+		"/C/wamp/www/cornerstone_community_outrach/app/Http/Requests/Auth/LoginRequest.php",
+		"/C/wamp/www/cornerstone_community_outrach/app/Http/Controllers/Auth/AuthController.php",
+		"/C/wamp/www/cornerstone_community_outrach/resources/views/home.blade.php",
+		"/C/wamp/www/cornerstone_community_outrach/app/Http/Controllers/HomeController.php",
+		"/C/wamp/www/cornerstone_community_outrach/resources/views/app.blade.php",
+		"/C/wamp/www/cornerstone_community_outrach/app/Http/Controllers/UserController.php",
+		"/C/wamp/www/cornerstone_community_outrach/app/Http/Controllers/WelcomeController.php",
+		"/C/wamp/www/cornerstone_community_outrach/app/Http/routes.php",
+		"/C/wamp/www/cornerstone_community_outrach/app/Services/Registrar.php",
+		"/C/wamp/www/cornerstone_community_outrach/database/migrations/2014_10_12_000000_create_users_table.php",
+		"/C/wamp/www/cornerstone_community_outrach/vendor/compiled.php",
+		"/C/wamp/www/cornerstone_community_outreach/app/Http/Controllers/Auth/AuthController.php",
+		"/C/wamp/www/cornerstone_community_outrach/app/Http/Requests/Auth/RegisterRequest.php",
+		"/C/wamp/www/cornerstone_community_outrach/database/migrations/2015_03_19_160358_create_temps_table.php",
+		"/C/wamp/www/cornerstone_community_outrach/database/migrations/2015_03_19_160345_create_families_table.php",
+		"/C/wamp/www/cornerstone_community_outrach/database/migrations/2015_03_19_160332_create_clients_table.php",
+		"/C/wamp/www/cornerstone_community_outrach/database/migrations/2014_10_12_100000_create_password_resets_table.php",
+		"/C/Users/Eduardo Cortez/Videos/Free YouTube Downloader/Cantinflas.txt",
+		"/C/wamp/www/cornerstone_community_outrach/app/Http/Middleware/Authenticate.php",
+		"/C/wamp/www/cornerstone_community_outrach/resources/views/clients/index.blade.php",
+		"/C/wamp/www/cornerstone_community_outrach/app/User.php",
+		"/C/wamp/www/cornerstone_community_outrach/vendor/laravel/framework/src/Illuminate/Contracts/Auth/Authenticatable.php",
+		"/C/wamp/www/cornerstone_community_outrach/database/seeds/DatabaseSeeder.php",
+		"/C/Users/Eduardo Cortez/Documents/Depaul/School/Senior Year/Fall 2014/CSC 348/HW3Solution/Calculator/src/calc/Main.java",
+		"/C/Users/Eduardo Cortez/Documents/Depaul/School/Senior Year/Fall 2014/CSC 348/HW3Solution/Calculator/parser/parser.sable",
+		"/C/Users/Eduardo Cortez/Documents/Depaul/School/Senior Year/Fall 2014/CSC 348/HW3Solution/Calculator/src/calc/EvaluationVisitor.java",
+		"/C/Users/Eduardo Cortez/Documents/Depaul/School/Senior Year/Fall 2014/CSC 348/HW3Solution/Calculator/src/calc/Temp.java",
+		"/C/Users/Eduardo Cortez/Documents/Depaul/School/CSC 360/calculate.js",
+		"/C/Users/Eduardo Cortez/Documents/Depaul/School/CSC 360/windchill.html",
+		"/C/wamp/www/cornerstone_community_outrach/vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesAndRegistersUsers.php",
+		"/C/wamp/www/cornerstone_community_outrach/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Tests/HttpCache/HttpCacheTestCase.php",
+		"/C/wamp/www/cornerstone_community_outrach/resources/views/auth/register.blade.php",
+		"/C/wamp/www/cornerstone_community_outrach/resources/views/temps/create.blade.php",
+		"/C/wamp/www/cornerstone_community_outrach/app/Http/Middleware/RedirectIfAuthenticated.php",
+		"/C/wamp/www/cornerstone_community_outrach/resources/views/users/show.blade.php",
+		"/C/wamp/www/cornerstone_community_outrach/app/Http/Controllers/TestContrller.php",
+		"/C/wamp/www/cornerstone_community_outrach/resources/views/welcome.blade.php",
+		"/C/wamp/www/cornerstone_community_outrach/vendor/symfony/routing/Symfony/Component/Routing/Matcher/RedirectableUrlMatcherInterface.php",
+		"/C/wamp/www/test/resources/views/app.blade.php",
+		"/C/wamp/www/cornerstone_community_outrach/vendor/symfony/security-core/Symfony/Component/Security/Core/Authentication/Token/RememberMeToken.php",
+		"/C/wamp/www/cornerstone_community_outrach/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php",
+		"/C/wamp/www/cornerstone_community_outrach/vendor/nikic/php-parser/lib/PhpParser/Node/Expr/Closure.php",
+		"/C/wamp/www/cornerstone_community_outrach/resources/views/users/create.blade.php",
+		"/C/wamp/www/cornerstone_community_outrach/app/Http/Requests/CreateUserRequest.php",
+		"/C/wamp/www/cornerstone_community_outrach/resources/views/clients/create.blade.php",
+		"/C/wamp/www/cornerstone_community_outrach/app/Http/Requests/CreateTempRequest.php",
+		"/C/wamp/www/cornerstone_community_outrach/resources/views/clients/show.blade.php",
+		"/C/wamp/www/cornerstone_community_outrach/config/database.php",
+		"/C/wamp/www/cornerstone_community_outrach/vendor/laravel/framework/src/Illuminate/Contracts/Auth/Registrar.php",
+		"/C/wamp/www/cornerstone_community_outrach/app/Client.php",
+		"/C/wamp/www/cornerstone_community_outrach/bootstrap/app.php",
+		"/C/wamp/www/cornerstone_community_outrach/app/Http/Requests/CreateClientRequest.php",
+		"/C/wamp/www/CCO/vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesAndRegistersUsers.php",
+		"/C/wamp/www/cornerstone_community_outrach/database/migrations/.gitkeep",
+		"/C/wamp/www/cornerstone_community_outrach/vendor/laravel/framework/src/Illuminate/Auth/AuthServiceProvider.php",
+		"/C/wamp/www/CCO/database/seeds/DatabaseSeeder.php",
+		"/C/wamp/www/cornerstone_community_outrach/app/Temp.php",
+		"/C/Users/Eduardo Cortez/AppData/Roaming/Sublime Text 3/Packages/DocBlockr/README.md",
+		"/C/wamp/www/cornerstone_community_outrach/app/Http/Requests/Request.php",
+		"/C/wamp/www/cornerstone_community_outrach/storage/database.sqlite",
+		"/C/wamp/www/cornerstone_community_outrach/resources/views/temps/show.blade.php",
+		"/C/wamp/www/cornerstone_community_outrach/resources/views/users/index.blade.php",
+		"/C/wamp/www/cornerstone_community_outrach/resources/views/temps/index.blade.php"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"meal",
+			"lunch",
+			");\n",
+			"mealTime",
+			"btn-",
+			"btn",
+			"navbar",
+			"Http",
+			"clients.meal_counter",
+			"		 ",
+			"button",
+			"submit",
+			"remember",
+			"token",
+			"/"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"meal"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "app/Http/Controllers/ClientController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3414,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1625,
+								1638
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1022.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/Http/routes.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3201,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2192,
+								2192
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 714.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/Http/Controllers/MealController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3617,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2646,
+								2646
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1204.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "resources/views/meal/meal_roster_breakfast.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1833,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1238,
+								1238
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Laravel Blade Highlighter/laravel-blade.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 280.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "resources/views/home.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1094,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								139,
+								139
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Laravel Blade Highlighter/laravel-blade.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 98.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 22.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 24.0
+	},
+	"pinned_build_system": "",
+	"project": "project.sublime-project",
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"huard",
+				"vendor\\laravel\\framework\\src\\Illuminate\\Auth\\Guard.php"
+			],
+			[
+				"create_",
+				"database\\migrations\\2014_10_12_000000_create_users_table.php"
+			],
+			[
+				"authr",
+				"vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Auth\\AuthenticatesAndRegistersUsers.php"
+			],
+			[
+				"auther",
+				"vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Auth\\AuthenticatesAndRegistersUsers.php"
+			],
+			[
+				"createremember",
+				"vendor\\symfony\\security-core\\Symfony\\Component\\Security\\Core\\Authentication\\Token\\RememberMeToken.php"
+			],
+			[
+				"registra",
+				"app\\Services\\Registrar.php"
+			],
+			[
+				"registrar",
+				"vendor\\laravel\\framework\\src\\Illuminate\\Contracts\\Auth\\Registrar.php"
+			],
+			[
+				"authenticateand",
+				"vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Auth\\AuthenticatesAndRegistersUsers.php"
+			],
+			[
+				"authenticates",
+				"vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Auth\\AuthenticatesAndRegistersUsers.php"
+			],
+			[
+				"authenticate",
+				"app\\Http\\Middleware\\Authenticate.php"
+			],
+			[
+				"auth",
+				"vendor\\laravel\\framework\\src\\Illuminate\\Auth\\AuthServiceProvider.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"C:\\wamp\\www\\cornerstone_community_outreach\\project.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 392.0,
+		"last_filter": "login",
+		"selected_items":
+		[
+			[
+				"login",
+				"login"
+			]
+		],
+		"width": 848.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 303.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
