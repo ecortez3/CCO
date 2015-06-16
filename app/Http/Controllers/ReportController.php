@@ -13,7 +13,7 @@ class ReportController extends Controller {
 	public function viewIndex()
 	{
 		$time = Carbon::now();
-		$clients = Client::orderBy('lastName', 'asc')->get();
+		$clients = Client::orderBy('lname', 'asc')->get();
 		return view ('report.reporter_index', compact('clients', 'time'));
 	}
 	
@@ -21,7 +21,7 @@ class ReportController extends Controller {
 	{
 		$time=carbon::parse($month);
 		$time =$time->addMonth(1);
-		$clients = Client::orderBy('lastName', 'asc')->get();
+		$clients = Client::orderBy('lname', 'asc')->get();
 		return view ('report.reporter_index', compact('clients', 'time'));
 	}
 	
@@ -29,14 +29,14 @@ class ReportController extends Controller {
 	{
 		$time=carbon::parse($month);
 		$time=$time->subMonth(1);
-		$clients = Client::orderBy('lastName', 'asc')->get();
+		$clients = Client::orderBy('lname', 'asc')->get();
 		return view ('report.reporter_index', compact('clients', 'time'));
 	}
 	
 	public function printMonth($date)
 	{
 		$time=carbon::parse($date);
-		$clients = Client::orderBy('lastName', 'asc')->get();
+		$clients = Client::orderBy('lname', 'asc')->get();
 		return view ('report.month_view', compact('clients', 'time'));
 		
 	}
@@ -47,14 +47,14 @@ class ReportController extends Controller {
 		$curMonth = $time->month;
 		$cur = ceil($curMonth/3);
 		
-		$clients = Client::orderBy('lastName', 'asc')->get();
+		$clients = Client::orderBy('lname', 'asc')->get();
 		
 		return view ('report.quarter_view', compact('clients', 'cur'));
 	}
 	
 	public function printAnnual($date)
 	{
-		$clients = Client::orderBy('lastName', 'asc')->get();
+		$clients = Client::orderBy('lname', 'asc')->get();
 		$time=carbon::parse($date);
 		$year = $time->year;
 		
@@ -64,7 +64,7 @@ class ReportController extends Controller {
 	public function printMonthReport($date)
 	{
 		$time=carbon::parse($date);
-		$clients = Client::orderBy('lastName', 'asc')->get();
+		$clients = Client::orderBy('lname', 'asc')->get();
 				
 		return view ('report.month_report_view', compact('clients', 'time'));
 	}
@@ -74,14 +74,14 @@ class ReportController extends Controller {
 		$time=carbon::parse($date);
 		$curMonth = $time->month;
 		$cur = ceil($curMonth/3);
-		$clients = Client::orderBy('lastName', 'asc')->get();
+		$clients = Client::orderBy('lname', 'asc')->get();
 				
 		return view ('report.quarter_report_view', compact('clients', 'cur'));
 	}
 	
 	public function printAnnualReport($date)
 	{
-		$clients = Client::orderBy('lastName', 'asc')->get();
+		$clients = Client::orderBy('lname', 'asc')->get();
 		$time=carbon::parse($date);
 		$year = $time->year;;
 				

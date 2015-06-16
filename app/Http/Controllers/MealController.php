@@ -21,7 +21,7 @@ class MealController extends Controller {
 	public function mealRosterBreakfast()
 	{
 		$meals = Meal::orderBy('date_fed', 'desc')->first();
-		$clients = Client::orderBy('lastName', 'asc')->get();
+		$clients = Client::orderBy('lname', 'asc')->get();
 
 		if($meals->date_fed != date('Y-m-d')){
 			foreach($clients as $client){
@@ -40,7 +40,7 @@ class MealController extends Controller {
 	public function mealRosterLunch()
 	{
 		$meals = Meal::orderBy('date_fed', 'desc')->first();
-		$clients = Client::orderBy('lastName', 'asc')->get();
+		$clients = Client::orderBy('lname', 'asc')->get();
 
 		if($meals->date_fed != date('Y-m-d')){
 			foreach($clients as $client){
@@ -60,7 +60,7 @@ class MealController extends Controller {
 	public function mealRosterDinner()
 	{
 		$meals = Meal::orderBy('date_fed', 'desc')->first();
-		$clients = Client::orderBy('lastName', 'asc')->get();
+		$clients = Client::orderBy('lname', 'asc')->get();
 
 		if($meals->date_fed != date('Y-m-d')){
 			foreach($clients as $client){
