@@ -64,7 +64,6 @@ class ReportController extends Controller {
 	public function printMonthReport($date)
 	{
 		$time=carbon::parse($date);
-		$meal = App\Meal::where(YEAR
 		$clients = Client::orderBy('lastName', 'asc')->get();
 				
 		return view ('report.month_report_view', compact('clients', 'time'));
