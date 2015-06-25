@@ -12,9 +12,10 @@ class ReportController extends Controller {
 
 	public function viewIndex()
 	{
+        // We need to get all clients, then get all meals for each client (two arrays)
 		$time = Carbon::now();
 		$clients = Client::orderBy('lname', 'asc')->get();
-		return view ('report.reporter_index', compact('clients', 'time'));
+		return view ('report.reporter_index', compact('clients', 'thisOnesMeals', 'time'));
 	}
 	
 	public function nextMonth($month)

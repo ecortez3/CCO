@@ -88,24 +88,15 @@
 						<th style="color:red" scope="col">TOTAL</th>
 					</tr>
 				</thead>
+                <!-- $client->meal()->where('date', '2015-01-01')->get() -->
 				@foreach ($clients as $client)
+                   <?php $thisOnesMeals = $client->meal()->where('date_fed', '>', '2015-01-01')->get()->toArray(); ?>
+                   <?php // $partner_id=isset($_POST['partner_id']) ? $_POST['partner_id'] : 0; ?>
 
 					<tr class="alt">
-					
 						<td>{{ $client->lname }} </td>
 						<td>{{ $client->fname }} </td>
 						<td width = "3.22%">{{ $client->meal->last()->breakfast }} </td>
-						<td width = "3.22%">{{ $client->breakfast }} </td>
-						<td width = "3.22%">{{ $client->breakfast }} </td>
-						<td width = "3.22%">{{ $client->breakfast }} </td>
-						<td width = "3.22%">{{ $client->breakfast }} </td>
-						<td width = "3.22%">{{ $client->breakfast }} </td>
-						<td width = "3.22%">{{ $client->breakfast }} </td>
-						<td width = "3.22%">{{ $client->breakfast }} </td>
-						<td width = "3.22%">{{ $client->breakfast }} </td>
-						<td width = "3.22%">{{ $client->breakfast }} </td>
-						<td width = "3.22%">{{ $client->breakfast }} </td>
-						<td width = "3.22%">{{ $client->breakfast }} </td>
 						<td width = "3.22%">{{ $client->breakfast }} </td>
 						<td width = "3.22%">{{ $client->breakfast }} </td>
 						<td width = "3.22%">{{ $client->breakfast }} </td>
