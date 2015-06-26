@@ -25,7 +25,7 @@ class ClientController extends Controller {
 	public function index()
 	{
 		$time = Carbon::now();
-		$clients = Client::orderBy('lastName', 'asc')->get();
+		$clients = Client::orderBy('lname', 'asc')->get();
 
 		return view('clients.index', compact('clients', 'time'));
 	}

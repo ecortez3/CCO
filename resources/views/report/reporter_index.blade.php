@@ -41,7 +41,7 @@
 			</span>
 			
 			<span class="floatright">
-				Total Meals =  0
+				Total Meals = {{ $dayGrandTotal }}
 				Total Eligible = 0
 				Total Ineligible = 0
 			</span>
@@ -49,114 +49,37 @@
 		</div>
 		&nbsp;
 		<div class="row">
-			<table class="table-striped">
+			<table class="">
 				<thead>
 					<tr>
 						<th scope="col">Last</th>
 						<th scope="col">First</th>
-						<th scope="col">1</th>
-						<th scope="col">2</th>
-						<th scope="col">3</th>
-						<th scope="col">4</th>
-						<th scope="col">5</th>
-						<th scope="col">6</th>
-						<th scope="col">7</th>
-						<th scope="col">8</th>
-						<th scope="col">9</th>
-						<th scope="col">10</th>
-						<th scope="col">11</th>
-						<th scope="col">12</th>
-						<th scope="col">13</th>
-						<th scope="col">14</th>
-						<th scope="col">15</th>
-						<th scope="col">16</th>
-						<th scope="col">17</th>
-						<th scope="col">18</th>
-						<th scope="col">19</th>
-						<th scope="col">20</th>
-						<th scope="col">21</th>
-						<th scope="col">22</th>
-						<th scope="col">23</th>
-						<th scope="col">24</th>
-						<th scope="col">25</th>
-						<th scope="col">26</th>
-						<th scope="col">27</th>
-						<th scope="col">28</th>
-						<th scope="col">29</th>
-						<th scope="col">30</th>
-						<th scope="col">31</th>
+                        @for($i=1;$i<=31;$i++)
+                            <th scope="col">{{ $i }}</th>
+                        @endfor
 						<th style="color:red" scope="col">TOTAL</th>
 					</tr>
 				</thead>
-                <!-- $client->meal()->where('date', '2015-01-01')->get() -->
 				@foreach ($clients as $client)
-                   <?php $thisOnesMeals = $client->meal()->where('date_fed', '>', '2015-01-01')->get()->toArray(); ?>
-                   <?php // $partner_id=isset($_POST['partner_id']) ? $_POST['partner_id'] : 0; ?>
-
 					<tr class="alt">
+                        <?php $id = $client->id; ?>
 						<td>{{ $client->lname }} </td>
 						<td>{{ $client->fname }} </td>
-						<td width = "3.22%">{{ $client->meal->last()->breakfast }} </td>
-						<td width = "3.22%">{{ $client->breakfast }} </td>
-						<td width = "3.22%">{{ $client->breakfast }} </td>
-						<td width = "3.22%">{{ $client->breakfast }} </td>
-						<td width = "3.22%">{{ $client->breakfast }} </td>
-						<td width = "3.22%">{{ $client->breakfast }} </td>
-						<td width = "3.22%">{{ $client->breakfast }} </td>
-						<td width = "3.22%">{{ $client->breakfast }} </td>
-						<td width = "3.22%">{{ $client->breakfast }} </td>
-						<td width = "3.22%">{{ $client->breakfast }} </td>
-						<td width = "3.22%">{{ $client->breakfast }} </td>
-						<td width = "3.22%">{{ $client->breakfast }} </td>
-						<td width = "3.22%">{{ $client->breakfast }} </td>
-						<td width = "3.22%">{{ $client->breakfast }} </td>
-						<td width = "3.22%">{{ $client->breakfast }} </td>
-						<td width = "3.22%">{{ $client->breakfast }} </td>
-						<td width = "3.22%">{{ $client->breakfast }} </td>
-						<td width = "3.22%">{{ $client->breakfast }} </td>
-						<td width = "3.22%">{{ $client->breakfast }} </td>
-						<td width = "3.22%">{{ $client->breakfast }} </td>
-						<td width = "3.22%"><a href = "">0</td>
-
-					</tr>	
+                            @for($i=1;$i<=31;$i++)
+                                <td width = "3.22%">{{ $mealsDayTotal[$id][$i] }} </td>
+                            @endfor
+                            <td><a href = "">{{ $mealsTotal[$id] }}</a></td>
+					</tr>
 				@endforeach
 				
 				<tr style="color: red; font-weight: bold;">
 						<td>TOTAL</td>
 						<td><a href = ""></a></td>
-						<td><a href = "">0</a></td>
-						<td><a href = "">0</a></td>
-						<td><a href = "">0</a></td>
-						<td><a href = "">0</a></td>
-						<td><a href = "">0</a></td>
-						<td><a href = "">0</a></td>
-						<td><a href = "">0</a></td>
-						<td><a href = "">0</a></td>
-						<td><a href = "">0</a></td>
-						<td><a href = "">0</a></td>
-						<td><a href = "">0</a></td>
-						<td><a href = "">0</a></td>
-						<td><a href = "">0</a></td>
-						<td><a href = "">0</a></td>
-						<td><a href = "">0</a></td>
-						<td><a href = "">0</a></td>
-						<td><a href = "">0</a></td>
-						<td><a href = "">0</a></td>
-						<td><a href = "">0</a></td>
-						<td><a href = "">0</a></td>
-						<td><a href = "">0</a></td>
-						<td><a href = "">0</a></td>
-						<td><a href = "">0</a></td>
-						<td><a href = "">0</a></td>
-						<td><a href = "">0</a></td>
-						<td><a href = "">0</a></td>
-						<td><a href = "">0</a></td>
-						<td><a href = "">0</a></td>
-						<td><a href = "">0</a></td>
-						<td><a href = "">0</a></td>
-						<td><a href = "">0</a></td>
-						<td><a href = "">0</a></td>
-						
+                        @for($i=1;$i<=31;$i++)
+                            <td><a href = "">{{ $dayTotal[$i] }}</a></td>
+                        @endfor
+						<td><a href = "">{{ $dayGrandTotal  }}</a></td>
+
 				</tr>
 			</table>	
 		</div>

@@ -23,6 +23,7 @@ class MealController extends Controller {
 		$meals = Meal::orderBy('date_fed', 'desc')->first();
 		$clients = Client::orderBy('lname', 'asc')->get();
 
+        // This won't work for clients added during the day.
 		if($meals->date_fed != date('Y-m-d')){
 			foreach($clients as $client){
 				$meals = new Meal;
