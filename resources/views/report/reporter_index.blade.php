@@ -42,8 +42,8 @@
 			
 			<span class="floatright">
 				Total Meals = {{ $dayGrandTotal }}
-				Total Eligible = 0
-				Total Ineligible = 0
+				Total Eligible = {{ $eligibleDayGrandTotal }}
+				Total Ineligible = {{ $dayGrandTotal - $eligibleDayGrandTotal }}
 			</span>
 			
 		&nbsp;
@@ -53,6 +53,7 @@
 		<div class="row">
 		<div class="col-md-21" >Last</div>
 		<div class="col-md-21" >First</div>
+        <div class="col-md-21" >&nbsp;</div>
          @for($i=1;$i<=31;$i++)
          <div class="col-md-1a" >{{ $i }}</div>
          @endfor
@@ -63,6 +64,7 @@
                         <?php $id = $client->id; ?>
 						<div class="col-md-2">{{ $client->lname }} </div>
 						<div class="col-md-2">{{ $client->fname }} </div>
+                        <div class="col-md-2"></div>
                             @for($i=1;$i<=31;$i++)
                                 <div class="col-md-1" width = "3.22%">{{ $mealsDayTotal[$id][$i] }} </div>
                             @endfor
@@ -72,6 +74,7 @@
         <div class="row">
 				<div class="col-md-22">TOTAL</div>
 				<div class="col-md-22"><a href = ""></a></div>
+                <div class="col-md-22"><a href = ""></a></div>
                 @for($i=1;$i<=31;$i++)
                     <div class="col-md-1b"><a href = "">{{ $dayTotal[$i] }}</a></div>
                 @endfor

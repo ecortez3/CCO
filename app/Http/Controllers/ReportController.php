@@ -15,12 +15,14 @@ class ReportController extends Controller {
         // We need to get all clients, then get all meals for each client (two arrays)
         $time = Carbon::now();
         $clients = Client::orderBy('lname', 'asc')->get();
-        $mealsTotal = $mealsDayTotal = $dayTotal = array();
-        $dayGrandTotal = 0;
+        $mealsTotal = $mealsDayTotal = $dayTotal = $eligibleMealsDayTotal = array();
+        $dayGrandTotal = $eligibleDayGrandTotal = 0;
+        $eligible=0;
         for ($i=1;$i<=31;$i++) { $dayTotal[$i] = 0; }
         foreach($clients as $client)
         {
             $id = $client->id;
+            if ($client->program_id == 5) { $eligible=0;} else {$eligible=1;}
             $mealsTotal[$id]=0;
             $startdate = date('Y-m-d', strtotime($time->year . '-' . ($time->month) . '-01')) ;
             if($time->month == 12) {
@@ -53,21 +55,27 @@ class ReportController extends Controller {
                 $mealsTotal[$id] += ($mealRows[$id][$i][1] + $mealRows[$id][$i][2] + $mealRows[$id][$i][3]);
                 $dayTotal[$i] += ($mealRows[$id][$i][1] + $mealRows[$id][$i][2] + $mealRows[$id][$i][3]) ;
                 $dayGrandTotal += $mealsDayTotal[$id][$i];
+                if ($eligible) {
+                    $eligibleMealsDayTotal[$id][$i] = $mealRows[$id][$i][1] + $mealRows[$id][$i][2] + $mealRows[$id][$i][3];
+                    $eligibleDayGrandTotal += $eligibleMealsDayTotal[$id][$i];
+                }
             }
         }
-         return view ('report.reporter_index', compact('clients', 'mealRows', 'mealsTotal', 'mealsDayTotal', 'dayTotal', 'dayGrandTotal', 'time'));
+         return view ('report.reporter_index', compact('clients', 'mealRows', 'mealsTotal', 'mealsDayTotal', 'dayTotal', 'dayGrandTotal', 'eligibleDayGrandTotal', 'time'));
     }
     public function viewMealIndex($mealdigit)
     {
         // We need to get all clients, then get all meals for each client (two arrays)
         $time = Carbon::now();
         $clients = Client::orderBy('lname', 'asc')->get();
-        $mealsTotal = $mealsDayTotal = $dayTotal = array();
-        $dayGrandTotal = 0;
+        $mealsTotal = $mealsDayTotal = $dayTotal = $eligibleMealsDayTotal = array();
+        $dayGrandTotal = $eligibleDayGrandTotal = 0;
+        $eligible=0;
         for ($i=1;$i<=31;$i++) { $dayTotal[$i] = 0; }
         foreach($clients as $client)
         {
             $id = $client->id;
+            if ($client->program_id == 5) { $eligible=0;} else {$eligible=1;}
             $mealsTotal[$id]=0;
             $startdate = date('Y-m-d', strtotime($time->year . '-' . ($time->month) . '-01')) ;
             if($time->month == 12) {
@@ -100,9 +108,13 @@ class ReportController extends Controller {
                 $mealsTotal[$id] += ($mealRows[$id][$i][$mealdigit]);
                 $dayTotal[$i] += ($mealRows[$id][$i][$mealdigit]) ;
                 $dayGrandTotal += $mealsDayTotal[$id][$i];
+                if ($eligible) {
+                    $eligibleMealsDayTotal[$id][$i] = $mealRows[$id][$i][$mealdigit];
+                    $eligibleDayGrandTotal += $eligibleMealsDayTotal[$id][$i];
+                }
             }
         }
-        return view ('report.reporter_index', compact('clients', 'mealRows', 'mealsTotal', 'mealsDayTotal', 'dayTotal', 'dayGrandTotal', 'time'));
+        return view ('report.reporter_index', compact('clients', 'mealRows', 'mealsTotal', 'mealsDayTotal', 'dayTotal', 'dayGrandTotal', 'eligibleDayGrandTotal', 'time'));
     }
 
 
