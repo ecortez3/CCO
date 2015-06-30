@@ -2,8 +2,7 @@
 @extends('app')
 
 @section('content')
-
-	<div class="container-fluid">
+	<div class="container">
 		<div class="nick-header">
 			<h1> Clients {{ $time->format('m/Y') }} </h1>
 		</div>
@@ -46,42 +45,37 @@
 				Total Ineligible = 0
 			</span>
 			
-		</div>
 		&nbsp;
+        </div>
+        <br />
+        <div class="row-container">
 		<div class="row">
-			<table class="">
-				<thead>
-					<tr>
-						<th scope="col">Last</th>
-						<th scope="col">First</th>
-                        @for($i=1;$i<=31;$i++)
-                            <th scope="col">{{ $i }}</th>
-                        @endfor
-						<th style="color:red" scope="col">TOTAL</th>
-					</tr>
-				</thead>
+		<div class="col-md-21" >Last</div>
+		<div class="col-md-21" >First</div>
+         @for($i=1;$i<=31;$i++)
+         <div class="col-md-1a" >{{ $i }}</div>
+         @endfor
+		<div class="col-md-21" style="color:red">TOTAL</div>
+        </div>
 				@foreach ($clients as $client)
-					<tr class="alt">
+                        <div class="row">
                         <?php $id = $client->id; ?>
-						<td>{{ $client->lname }} </td>
-						<td>{{ $client->fname }} </td>
+						<div class="col-md-2">{{ $client->lname }} </div>
+						<div class="col-md-2">{{ $client->fname }} </div>
                             @for($i=1;$i<=31;$i++)
-                                <td width = "3.22%">{{ $mealsDayTotal[$id][$i] }} </td>
+                                <div class="col-md-1" width = "3.22%">{{ $mealsDayTotal[$id][$i] }} </div>
                             @endfor
-                            <td><a href = "">{{ $mealsTotal[$id] }}</a></td>
-					</tr>
+                            <div class="col-md-2"><a href = "">{{ $mealsTotal[$id] }}</a></div>
+                        </div>
 				@endforeach
-				
-				<tr style="color: red; font-weight: bold;">
-						<td>TOTAL</td>
-						<td><a href = ""></a></td>
-                        @for($i=1;$i<=31;$i++)
-                            <td><a href = "">{{ $dayTotal[$i] }}</a></td>
-                        @endfor
-						<td><a href = "">{{ $dayGrandTotal  }}</a></td>
-
-				</tr>
-			</table>	
+        <div class="row">
+				<div class="col-md-22">TOTAL</div>
+				<div class="col-md-22"><a href = ""></a></div>
+                @for($i=1;$i<=31;$i++)
+                    <div class="col-md-1b"><a href = "">{{ $dayTotal[$i] }}</a></div>
+                @endfor
+					<div class="col-md-22"><a href = "">{{ $dayGrandTotal  }}</a></div>
 		</div>
+        </div> <!-- .row-container -->
 	</div>
 @stop
