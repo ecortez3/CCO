@@ -36,8 +36,10 @@
 		&nbsp;
 		<div class="row">
 			<span class="floatleft">
-				<input type="search"  placeholder="Search here" name="searchDatabase">
-				<input type="submit">
+                <form action="/search" method="get">
+                    <input type="query"  id="query" placeholder="Search here" name="query">
+                    <input type="submit">
+                </form>
 			</span>
 			
 			<span class="floatright">

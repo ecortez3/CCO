@@ -32,6 +32,7 @@ Route::get('roster', 'ClientController@roster');
 
 Route::get('insert/{id}', 'ClientController@createFromTemp');
 
+Route::get('search', array('as' => 'search', 'uses' => 'ReportController@search'));
 
 /**
  * 	Routes are solely available to the Aministrator 
