@@ -23,13 +23,14 @@
 				&nbsp;
 				<a href="{{action('ReportController@printQuarterReport', [$time] )}}"><img alt="Quarterly Report" src="/3.png" height="15" width="15" title="Quarterly Report"></a>
 				&nbsp;
-				<a href="{{action('ReportController@printAnnualReport', [$time] )}}"><img alt="Annual Report" src="/4.png" height="15" width="15" title="Annual Report"></a>
-				
+            <a href="{{action('ReportController@printAnnualReport', [$time] )}}"><img alt="Annual Report" src="/4.png" height="15" width="15" title="Annual Report"></a>
+
 				<span class="floatright" style="right:0;">
-					<a href="action('ReprotController@BreakfastReport')">Breakfast</a> |
-					<a href="action('ReprotController@LunchReport')">Lunch </a> |
-					<a href="action('ReprotController@DinnerReport')">Dinner</a>
-					
+				<a href="{{action('ReportController@viewIndex')}}">All</a> |
+				<a href="{{action('ReportController@viewMealIndex', ['1'])}}">Breakfast</a> |
+				<a href="{{action('ReportController@viewMealIndex', ['2'])}}">Lunch</a> |
+				<a href="{{action('ReportController@viewMealIndex', ['3'])}}">Dinner</a>
+
 				</span>
 		</div>
 		&nbsp;

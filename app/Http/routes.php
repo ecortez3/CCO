@@ -115,6 +115,8 @@ Route::get('r_quarter_view/{cur}', 'ReportController@printQuarterReport');
 
 Route::get('r_annual_view/{year}', 'ReportController@printAnnualReport');
 
+Route::get('r_view_meal_index/{meal}', 'ReportController@viewMealIndex');
+
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
