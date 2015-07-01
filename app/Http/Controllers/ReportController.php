@@ -64,6 +64,7 @@ class ReportController extends Controller {
         }
          return view ('report.reporter_index', compact('clients', 'mealRows', 'mealsTotal', 'mealsDayTotal', 'dayTotal', 'dayGrandTotal', 'eligibleDayGrandTotal', 'time'));
     }
+
     public function viewMealIndex($mealdigit)
     {
         // We need to get all clients, then get all meals for each client (two arrays)
@@ -186,21 +187,48 @@ class ReportController extends Controller {
 		$clients = Client::orderBy('lname', 'asc')->get();
 		return view ('report.reporter_index', compact('clients', 'time'));
 	}
-	
-	public function previousMonth($month)
+
+    /**
+     * @param $month
+     * @return \Illuminate\View\View
+     */
+    public function previousMonth($month)
 	{
 		$time=carbon::parse($month);
 		$time=$time->subMonth(1);
 		$clients = Client::orderBy('lname', 'asc')->get();
 		return view ('report.reporter_index', compact('clients', 'time'));
 	}
-	
-	public function printMonth($date)
+
+    /**
+     * @param $date
+     * @return \Illuminate\View\View
+     */
+    public function printMonth($date)
 	{
 		$time=carbon::parse($date);
+        $stdate = date('Y-m-d', strtotime($time->year . '-' . ($time->month) . '-01')) ;
+        if($time->month == 12) {
+            $edate = date('Y-m-d', strtotime(($time->year+1) . '-01-01'));
+        } else {
+            $edate = date('Y-m-d', strtotime($time->year . '-' . ($time->month + 1) . '-01'));
+        }
 		$clients = Client::orderBy('lname', 'asc')->get();
-		return view ('report.month_view', compact('clients', 'time'));
-		
+        $hannah_clients = Client::where('program_id', '=', '1')->orderBy('lname', 'asc')->get();
+        $sylvia_clients = Client::where('program_id', '=', '2')->orderBy('lname', 'asc')->get();
+        $naomi_clients = Client::where('program_id', '=', '3')->orderBy('lname', 'asc')->get();
+        $wnaomi_clients = Client::where('program_id', '=', '4')->orderBy('lname', 'asc')->get();
+        $outreach_clients = Client::where('program_id', '=', '5')->orderBy('lname', 'asc')->get();
+
+        $mealsTotal = $this->mealsTotal($stdate, $edate);
+        return view ('report.month_view', compact('clients',
+                        'mealsTotal',
+                        'hannah_clients',
+                        'sylvia_clients',
+                        'naomi_clients',
+                        'wnaomi_clients',
+                        'outreach_clients',
+                        'time'));
 	}
 
 	public function printQuarter($date)
@@ -249,11 +277,35 @@ class ReportController extends Controller {
 				
 		return view ('report.annual_report_view', compact('clients', 'year'));
 	}
-	
-	// public function breakfastReport($time)
-	// {
-		
-	// }
+
+
+    /**
+     * @param $stdate
+     * @param $edate
+     * @return array
+     */
+    public function mealsTotal($stdate, $edate)
+    {
+        $clients = Client::orderBy('lname', 'asc')->get();
+        $mealTotal = array();
+        for ($i=1;$i<=31;$i++) { $dayTotal[$i] = 0; }
+        foreach($clients as $client)
+        {
+            $id = $client->id;
+            $mealTotal[$id]=0;
+            $rowMeals[$id] = $client->meal()->where('date_fed', '>=', $stdate)
+                ->where('date_fed', '<', $edate)
+                ->get()->toArray();
+            foreach ($rowMeals[$id] as $row)
+            {
+                $b = $row['breakfast'];
+                $l = $row['lunch'];
+                $d = $row['dinner'];
+                $mealTotal[$id] += ($b + $l + $d);
+            }
+        }
+        return $mealTotal;
+    }
 
 
 }

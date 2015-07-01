@@ -13,17 +13,15 @@
 						<th scope="col">Clients</th>
 						<th scope="col">HMIS ID</th>
 						<th scope="col">Meals</th>
-						<th scope="col">Eligibility</th>
 
 					</tr>
 				</thead>
-				@foreach ($clients as $client)
+				@foreach ($hannah_clients as $client)
 					<tr class="alt">
 						<td align="center" width = "50%">{{ $client->lname }} {{ $client->fname }}</td>
-						<td align="center" width = "20%">-</td>
-						<td align="center" width = "20%">-</td>
-						<td align="center" width = "10%">-</td>
-					</tr>	
+						<td align="center" width = "20%">{{ $client->HMISID }}</td>
+						<td align="center" width = "20%">{{ $mealsTotal[$client->id] }}</td>
+					</tr>
 				@endforeach
 			</table>
 			&nbsp; &nbsp;
@@ -34,40 +32,74 @@
 						<th scope="col">Clients</th>
 						<th scope="col">HMIS ID#</th>
 						<th scope="col">Meals</th>
-						<th scope="col">Eligibility</th>
 
 					</tr>
 				</thead>
-				@foreach ($clients as $client)
+				@foreach ($sylvia_clients as $client)
 					<tr class="alt">
 						<td align="center" width = "50%">{{ $client->lname }} {{ $client->fname }}</td>
-						<td align="center" width = "20%">-</td>
-						<td align="center" width = "20%">-</td>
-						<td align="center" width = "10%">-</td>
-					</tr>	
+                        <td align="center" width = "20%">{{ $client->HMISID }}</td>
+                        <td align="center" width = "20%">{{ $mealsTotal[$client->id] }}</td>
+					</tr>
 				@endforeach
 			</table>
 			&nbsp; &nbsp;
 			<table style="width:32%;display:inline-block;border:none">
-				<caption><h3>Naomi</h3></caption>
+				<caption><h3>Naomi(M)</h3></caption>
 				<thead>
 					<tr>
 						<th scope="col">Clients</th>
 						<th scope="col">HMIS ID#</th>
 						<th scope="col">Meals</th>
-						<th scope="col">Eligability</th>
 
 					</tr>
 				</thead>
-				@foreach ($clients as $client)
+				@foreach ($naomi_clients as $client)
 					<tr class="alt">
 						<td align="center" width = "50%">{{ $client->lname }} {{ $client->fname }}</td>
-						<td align="center" width = "20%">-</td>
-						<td align="center" width = "20%">-</td>
-						<td align="center" width = "10%">-</td>
-					</tr>	
+                        <td align="center" width = "20%">{{ $client->HMISID }}</td>
+                        <td align="center" width = "20%">{{ $mealsTotal[$client->id] }}</td>
+					</tr>
 				@endforeach
 			</table>
+            &nbsp; &nbsp;
+            <table style="width:32%;display:inline-block;border:none">
+                <caption><h3>Naomi(W)</h3></caption>
+                <thead>
+                <tr>
+                    <th scope="col">Clients</th>
+                    <th scope="col">HMIS ID#</th>
+                    <th scope="col">Meals</th>
+
+                </tr>
+                </thead>
+                @foreach ($wnaomi_clients as $client)
+                    <tr class="alt">
+                        <td align="center" width = "50%">{{ $client->lname }} {{ $client->fname }}</td>
+                        <td align="center" width = "20%">{{ $client->HMISID }}</td>
+                        <td align="center" width = "20%">{{ $mealsTotal[$client->id] }}</td>
+                    </tr>
+                @endforeach
+            </table>
+            &nbsp; &nbsp;
+            <table style="width:32%;display:inline-block;border:none">
+                <caption><h3>Outreach</h3></caption>
+                <thead>
+                <tr>
+                    <th scope="col">Clients</th>
+                    <th scope="col">HMIS ID#</th>
+                    <th scope="col">Meals</th>
+
+                </tr>
+                </thead>
+                @foreach ($outreach_clients as $client)
+                    <tr class="alt">
+                        <td align="center" width = "50%">{{ $client->lname }} {{ $client->fname }}</td>
+                        <td align="center" width = "20%">{{ $client->HMISID }}</td>
+                        <td align="center" width = "20%">{{ $mealsTotal[$client->id] }}</td>
+                    </tr>
+                @endforeach
+            </table>
 		</div>
 	</div>
 @stop
