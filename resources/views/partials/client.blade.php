@@ -33,8 +33,8 @@
 
 	<div class="form-group"> 
 		{!! Form::label('gender','Gender: ',array('id'=>'','class'=>'')) !!}
-		{!! Form::radio('gender', 'Male') !!} Male
-		{!! Form::radio('gender', 'Female') !!} Female
+		{!! Form::radio('gender', 'M') !!} Male
+		{!! Form::radio('gender', 'F') !!} Female
 	</div>
 
 	<div class="form-group">

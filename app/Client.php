@@ -66,4 +66,37 @@ class Client extends Model {
 		return $this->belongsTo('App\Family');
 	}
 
+    public function scopeHannah($query)
+    {
+        return $query->where('program_id', '=', '1');
+    }
+    public function scopeSylvia($query)
+    {
+        return $query->where('program_id', '=', '2');
+    }
+    public function scopeNaomim($query)
+    {
+        return $query->where('program_id', '=', '3');
+    }
+    public function scopeNaomiw($query)
+    {
+        return $query->where('program_id', '=', '4');
+    }
+    public function scopeOutreach($query)
+    {
+        return $query->where('program_id', '=', '5');
+    }
+    public function scopeMen($query)
+    {
+        return $query->whereIn('program_id', array(1,2));
+    }
+    public function scopeEligibleMen($query)
+    {
+        return $query->whereIn('program_id', array(1,2));
+    }
+    public function scopeInEligibleMen($query)
+    {
+        return $query->whereIn('program_id', array(5));
+    }
+
 }

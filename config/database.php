@@ -57,7 +57,7 @@ return [
 			'driver'    => 'mysql',
 			'host'      => env('DB_HOST', 'localhost'),
 			'database'  => env('DB_DATABASE', 'cco_meals'),
-			'username'  => env('DB_USERNAME', 'root'),
+			'username'  => env('DB_USERNAME', 'cco'),
 			'password'  => env('DB_PASSWORD', 'kermit'),
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',

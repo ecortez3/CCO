@@ -5,6 +5,7 @@
 	<div class="container">
 		<div class="nick-header">
 			<h1> Clients {{ $time->format('m/Y') }} </h1>
+            <h3> {{ $filter }} </h3>
 		</div>
 		
 		<div class="row">

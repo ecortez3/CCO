@@ -1,6 +1,7 @@
 <?php namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Client;
 
 class Program extends Model {
 
@@ -37,5 +38,6 @@ class Program extends Model {
 	{
 		return $this->hasMany('App\Client');
 	}
+
 
 }
